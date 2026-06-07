@@ -20,8 +20,11 @@
       --max: 1120px;
       --radius: 22px;
     }
+
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -32,99 +35,491 @@
       color: var(--text);
       line-height: 1.62;
     }
+
     a { color: inherit; text-decoration: none; }
+
     .page { width: 100%; overflow: hidden; }
+
     .nav-wrap {
-      position: sticky; top: 0; z-index: 50;
+      position: sticky;
+      top: 0;
+      z-index: 50;
       background: rgba(15,17,21,0.78);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(18px);
     }
+
     .nav {
-      max-width: var(--max); margin: 0 auto; padding: 17px 24px;
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 17px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    .brand { display: flex; flex-direction: column; line-height: 1.05; }
-    .brand strong { font-size: 18px; letter-spacing: 0.01em; font-weight: 760; }
-    .brand span { margin-top: 5px; color: var(--soft); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 650; }
-    .nav-links { display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 14px; }
-    .nav-links a { padding: 7px 9px; border-radius: 999px; transition: 0.2s ease; }
-    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.075); }
-    .section { max-width: var(--max); margin: 0 auto; padding: 86px 24px; }
-    .hero { min-height: 74vh; display: grid; grid-template-columns: 1.04fr 0.96fr; gap: 54px; align-items: center; padding-top: 98px; padding-bottom: 98px; }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand strong {
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      font-weight: 760;
+    }
+
+    .brand span {
+      margin-top: 5px;
+      color: var(--soft);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 650;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      padding: 7px 9px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.075);
+    }
+
+    .section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 86px 24px;
+    }
+
+    .hero {
+      min-height: 74vh;
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 54px;
+      align-items: center;
+      padding-top: 98px;
+      padding-bottom: 98px;
+    }
+
     .eyebrow {
-      display: inline-flex; width: fit-content; padding: 8px 13px; border-radius: 999px;
-      border: 1px solid rgba(201,164,95,0.28); background: var(--accent-soft); color: var(--accent);
-      font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 760; margin-bottom: 22px;
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,164,95,0.28);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 760;
+      margin-bottom: 22px;
     }
-    h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.04em; }
-    h1 { font-size: clamp(46px, 6.5vw, 82px); max-width: 800px; }
-    h2 { font-size: clamp(34px, 4.2vw, 54px); margin-bottom: 18px; }
-    h3 { font-size: 23px; margin-bottom: 12px; }
-    .lead { max-width: 690px; margin: 26px 0 0; color: var(--muted); font-size: clamp(18px, 2vw, 22px); }
-    .buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-size: clamp(46px, 6.5vw, 82px);
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4.2vw, 54px);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      max-width: 690px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
     .button {
-      min-height: 47px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px;
-      padding: 0 20px; font-weight: 760; border: 1px solid transparent; transition: 0.2s ease;
+      min-height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0 20px;
+      font-weight: 760;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
     }
-    .button.primary { background: var(--accent); color: #18130a; }
-    .button.primary:hover { transform: translateY(-2px); box-shadow: 0 16px 35px rgba(201,164,95,0.2); }
-    .button.secondary { color: var(--text); border-color: var(--line); background: rgba(255,255,255,0.04); }
-    .button.secondary:hover { transform: translateY(-2px); background: rgba(255,255,255,0.09); }
+
+    .button.primary {
+      background: var(--accent);
+      color: #18130a;
+    }
+
+    .button.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 35px rgba(201,164,95,0.2);
+    }
+
+    .button.secondary {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .button.secondary:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.09);
+    }
+
     .portrait-panel {
-      position: relative; min-height: 560px; border: 1px solid var(--line); border-radius: 34px;
-      background: linear-gradient(150deg, rgba(255,255,255,0.11), rgba(255,255,255,0.03)), radial-gradient(circle at 72% 30%, rgba(201,164,95,0.23), transparent 13rem), linear-gradient(160deg, #242a34, #101318);
-      overflow: hidden; box-shadow: 0 28px 80px rgba(0,0,0,0.32);
+      position: relative;
+      min-height: 560px;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        linear-gradient(150deg, rgba(255,255,255,0.11), rgba(255,255,255,0.03)),
+        radial-gradient(circle at 72% 30%, rgba(201,164,95,0.23), transparent 13rem),
+        linear-gradient(160deg, #242a34, #101318);
+      overflow: hidden;
+      box-shadow: 0 28px 80px rgba(0,0,0,0.32);
     }
+
     .portrait-wrap {
-      position: absolute; inset: 26px 26px 132px 26px; border-radius: 27px; overflow: hidden;
+      position: absolute;
+      inset: 26px 26px 132px 26px;
+      border-radius: 27px;
+      overflow: hidden;
       border: 1px solid rgba(255,255,255,0.14);
-      background: radial-gradient(circle at 30% 20%, rgba(201,164,95,0.30), transparent 18rem), linear-gradient(150deg, #272e39, #11151c);
+      background:
+        radial-gradient(circle at 30% 20%, rgba(201,164,95,0.30), transparent 18rem),
+        linear-gradient(150deg, #272e39, #11151c);
     }
-    .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.92) contrast(1.02); }
-    .portrait-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: rgba(244,239,231,0.46); text-align: center; padding: 28px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px; }
-    .panel-note { position: absolute; left: 26px; right: 26px; bottom: 26px; padding: 22px; border-radius: 22px; border: 1px solid rgba(255,255,255,0.15); background: rgba(7,9,12,0.70); backdrop-filter: blur(14px); }
-    .panel-note strong { display: block; font-size: 18px; margin-bottom: 7px; }
-    .panel-note span { color: var(--muted); font-size: 15px; }
-    .intro-grid { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 48px; align-items: start; }
-    .kicker { color: var(--accent); text-transform: uppercase; letter-spacing: 0.16em; font-size: 12px; font-weight: 800; margin-bottom: 14px; }
-    .body-lg { color: var(--muted); margin: 0; font-size: 20px; }
+
+    .portrait-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.92) contrast(1.02);
+    }
+
+    .portrait-wrap.has-photo .portrait-fallback {
+      display: none;
+    }
+
+    .portrait-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(244,239,231,0.46);
+      text-align: center;
+      padding: 28px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .panel-note {
+      position: absolute;
+      left: 26px;
+      right: 26px;
+      bottom: 26px;
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(7,9,12,0.70);
+      backdrop-filter: blur(14px);
+    }
+
+    .panel-note strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .panel-note span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .body-lg {
+      color: var(--muted);
+      margin: 0;
+      font-size: 20px;
+    }
+
     .body-lg + .body-lg { margin-top: 20px; }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 38px; }
-    .card { padding: 26px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--card); box-shadow: 0 18px 50px rgba(0,0,0,0.16); }
-    .card p { color: var(--muted); margin: 0; }
-    .num { display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; border-radius: 14px; margin-bottom: 21px; background: var(--accent-soft); color: var(--accent); border: 1px solid rgba(201,164,95,0.24); font-weight: 850; }
-    .method { margin-top: 38px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .method-item { padding: 24px; border-radius: 22px; border: 1px solid var(--line); background: rgba(255,255,255,0.052); }
-    .method-item strong { display: block; margin-bottom: 8px; font-size: 18px; color: var(--text); }
-    .method-item span { color: var(--muted); }
-    .work-block { margin-top: 36px; padding: 34px; border-radius: 30px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(255,255,255,0.076), rgba(255,255,255,0.035)), radial-gradient(circle at top left, rgba(201,164,95,0.12), transparent 25rem); }
-    .work-block p { margin: 0 0 18px; color: var(--muted); font-size: 18.5px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .card {
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.16);
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .num {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      margin-bottom: 21px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(201,164,95,0.24);
+      font-weight: 850;
+    }
+
+    .method {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .method-item {
+      padding: 24px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.052);
+    }
+
+    .method-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .method-item span {
+      color: var(--muted);
+    }
+
+    .work-block {
+      margin-top: 36px;
+      padding: 34px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.076), rgba(255,255,255,0.035)),
+        radial-gradient(circle at top left, rgba(201,164,95,0.12), transparent 25rem);
+    }
+
+    .work-block p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 18.5px;
+    }
+
     .work-block p:last-child { margin-bottom: 0; }
-    .project-list { display: grid; gap: 18px; margin-top: 38px; }
-    .project { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 28px; padding: 30px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--card); transition: 0.2s ease; }
-    .project:hover { background: var(--card2); transform: translateY(-2px); }
-    .tag { display: inline-flex; width: fit-content; padding: 6px 11px; border-radius: 999px; border: 1px solid rgba(201,164,95,0.28); background: var(--accent-soft); color: var(--accent); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; margin-bottom: 14px; }
-    .project p { color: var(--muted); margin: 0; }
-    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; margin-top: 38px; }
-    .quote { padding: 34px; border-radius: 30px; border: 1px solid rgba(201,164,95,0.24); background: linear-gradient(135deg, rgba(201,164,95,0.13), rgba(255,255,255,0.045)); }
-    .quote p { margin: 0; font-size: 24px; letter-spacing: -0.025em; line-height: 1.28; }
-    .links-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .mini-link { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; color: var(--muted); background: rgba(255,255,255,0.04); transition: all 0.2s ease; }
-    .mini-link:hover { color: var(--text); background: rgba(255,255,255,0.09); transform: translateY(-1px); }
-    .contact-box { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; padding: 38px; border-radius: 32px; border: 1px solid var(--line); background: radial-gradient(circle at top right, rgba(201,164,95,0.17), transparent 22rem), var(--card); box-shadow: 0 28px 80px rgba(0,0,0,0.25); }
-    .contact-box p { color: var(--muted); margin: 12px 0 0; max-width: 760px; font-size: 18px; }
-    footer { max-width: var(--max); margin: 0 auto; padding: 34px 24px 54px; color: var(--soft); border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+
+    .project-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 28px;
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--card);
+      transition: 0.2s ease;
+    }
+
+    .project:hover {
+      background: var(--card2);
+      transform: translateY(-2px);
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,164,95,0.28);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .project p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 38px;
+    }
+
+    .quote {
+      padding: 34px;
+      border-radius: 30px;
+      border: 1px solid rgba(201,164,95,0.24);
+      background: linear-gradient(135deg, rgba(201,164,95,0.13), rgba(255,255,255,0.045));
+    }
+
+    .quote p {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: -0.025em;
+      line-height: 1.28;
+    }
+
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      transition: all 0.2s ease;
+    }
+
+    .mini-link:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.09);
+      transform: translateY(-1px);
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      padding: 38px;
+      border-radius: 32px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at top right, rgba(201,164,95,0.17), transparent 22rem),
+        var(--card);
+      box-shadow: 0 28px 80px rgba(0,0,0,0.25);
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 12px 0 0;
+      max-width: 760px;
+      font-size: 18px;
+    }
+
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 34px 24px 54px;
+      color: var(--soft);
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
     @media (max-width: 920px) {
       .nav-links { display: none; }
-      .hero, .intro-grid, .project, .split, .contact-box { grid-template-columns: 1fr; }
-      .cards, .method { grid-template-columns: 1fr; }
+
+      .hero,
+      .intro-grid,
+      .project,
+      .split,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .method {
+        grid-template-columns: 1fr;
+      }
+
       .portrait-panel { min-height: 520px; }
+
       .section { padding: 66px 20px; }
+
       .contact-box { padding: 28px; }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header class="nav-wrap">
@@ -142,28 +537,37 @@
         </div>
       </nav>
     </header>
+
     <main>
       <section class="section hero" id="home">
         <div>
           <div class="eyebrow">Creative Producer · Writer · Braintrust Creative</div>
           <h1>Connecting stories, people, systems and perspectives.</h1>
-          <p class="lead">I am a Hungarian creative producer, executive producer, writer and multidisciplinary maker with a background in economics, film, animation, AR/XR and collaborative story development.</p>
+          <p class="lead">
+            I am a Hungarian creative producer, executive producer, writer and multidisciplinary maker
+            with a background in economics, film, animation, AR/XR and collaborative story development.
+          </p>
           <div class="buttons">
             <a class="button primary" href="#producer">Producer Work</a>
             <a class="button secondary" href="#braintrust">Braintrust Method</a>
           </div>
         </div>
+
         <div class="portrait-panel" aria-label="Portrait area">
           <div class="portrait-wrap">
-            <img src="profile.jpg" alt="Tamás Inczédy portrait" onerror="this.style.display='none';" />
+            <img src="profile.jpg" alt="Tamás Inczédy portrait" onload="this.parentElement.classList.add('has-photo');" onerror="this.style.display='none';" />
             <div class="portrait-fallback">Add photo as<br />profile.jpg</div>
           </div>
           <div class="panel-note">
             <strong>Human first. Story first.</strong>
-            <span>My work is about finding the human center of a project — the character, the hidden motive, the conflict and the emotional truth behind the narrative.</span>
+            <span>
+              My work is about finding the human center of a project — the character,
+              the hidden motive, the conflict and the emotional truth behind the narrative.
+            </span>
           </div>
         </div>
       </section>
+
       <section class="section" id="about">
         <div class="intro-grid">
           <div>
@@ -171,78 +575,206 @@
             <h2>Strategic thinking, literary roots and screen storytelling.</h2>
           </div>
           <div>
-            <p class="body-lg">I originally trained as an economist and began my career at NORDA, the Northern Hungary Regional Development Agency, where I worked in strategic and operational planning. After a period in Indonesia — and further work as an economist after returning to Hungary — I gradually moved toward animation, film and creative technology.</p>
-            <p class="body-lg">Today I work as a self-employed creative producer, bringing together story, production logic, visual thinking and collaborative development. I am especially interested in projects where a clear human question meets an ambitious creative form.</p>
-            <p class="body-lg">I currently live in Budapest with my wife and our three daughters. Outside work, we enjoy Indonesian food and climbing — two very different ways of staying close to movement, play and shared experience.</p>
+            <p class="body-lg">
+              I originally trained as an economist and began my career in regional development,
+              working in strategic and operational planning. After a period in Indonesia — and further work
+              in economics after returning to Hungary — I gradually moved toward animation, film and creative technology.
+            </p>
+            <p class="body-lg">
+              Today my work brings together story, production logic, visual thinking and collaborative development.
+              I am especially interested in projects where a clear human question meets an ambitious creative form.
+            </p>
+            <p class="body-lg">
+              I currently live in Budapest with my wife and our three daughters. Outside work, we enjoy Indonesian
+              food and climbing — two very different ways of staying close to movement, play and shared experience.
+            </p>
           </div>
         </div>
+
         <div class="cards">
-          <article class="card"><div class="num">01</div><h3>Producer</h3><p>Development, creative strategy, pitch positioning and production-oriented thinking for film, animation and immersive projects.</p></article>
-          <article class="card"><div class="num">02</div><h3>Braintrust Creative</h3><p>A collaborative way of working: connecting ideas, people, stories, systems and points of view.</p></article>
-          <article class="card"><div class="num">03</div><h3>Writer</h3><p>Literary work spanning books, prose, children’s stories, essays, adaptations and story-world development.</p></article>
+          <article class="card">
+            <div class="num">01</div>
+            <h3>Producer</h3>
+            <p>
+              Development, creative strategy, pitch positioning and production-oriented thinking for film,
+              animation and immersive projects.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="num">02</div>
+            <h3>Braintrust Creative</h3>
+            <p>
+              A collaborative way of working: connecting ideas, people, stories, systems and points of view.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="num">03</div>
+            <h3>Writer</h3>
+            <p>
+              Literary work spanning books, prose, children’s stories, essays, adaptations and story-world development.
+            </p>
+          </article>
         </div>
       </section>
+
       <section class="section" id="producer">
         <div class="kicker">Producer Work</div>
         <h2>Development, packaging and story strategy for screen and immersive projects.</h2>
-        <p class="body-lg">As a producer, I focus on the development phase where the creative identity of a project is formed: the premise, characters, tone, audience, visual direction and pitch materials. My work is to help turn a promising idea into a coherent, communicable and production-aware project.</p>
+        <p class="body-lg">
+          As a producer, I focus on the development phase where the creative identity of a project is formed:
+          the premise, characters, tone, audience, visual direction and pitch materials. My work is to help turn
+          a promising idea into a coherent, communicable and production-aware project.
+        </p>
+
         <div class="project-list">
-          <article class="project"><div><span class="tag">Animated Feature</span><h3>NORTH</h3></div><p>Executive Producer of <em>NORTH</em>, an animated feature inspired by Hans Christian Andersen’s <em>The Snow Queen</em>. The film premiered in 2025 and is expected to reach audiences in more than 60 countries.</p></article>
-          <article class="project"><div><span class="tag">AR/XR</span><h3>AR/XR Content Development & Production</h3></div><p>Development and production of immersive content where spatial storytelling, interaction and visual design support a clear narrative experience. The focus is on meaningful use of format: not technology for its own sake, but presence, perspective and audience engagement.</p></article>
-          <article class="project"><div><span class="tag">Television</span><h3>TV Series Writing</h3></div><p>Experience as part of Hungarian television series writers’ rooms, including work on <em>Drága örökösök</em>, contributing to story development, episode thinking and collaborative narrative work.</p></article>
+          <article class="project">
+            <div>
+              <span class="tag">Animated Feature</span>
+              <h3>NORTH</h3>
+            </div>
+            <p>
+              Executive Producer of <em>NORTH</em>, an animated feature inspired by Hans Christian Andersen’s
+              <em>The Snow Queen</em>. The film premiered in 2025 and is expected to reach audiences in more
+              than 60 countries.
+            </p>
+          </article>
+
+          <article class="project">
+            <div>
+              <span class="tag">AR/XR</span>
+              <h3>AR/XR Content Development & Production</h3>
+            </div>
+            <p>
+              Development and production of immersive content where spatial storytelling, interaction and visual design
+              support a clear narrative experience. The focus is on meaningful use of format: not technology for its own
+              sake, but presence, perspective and audience engagement.
+            </p>
+          </article>
+
+          <article class="project">
+            <div>
+              <span class="tag">Television</span>
+              <h3>TV Series Writing</h3>
+            </div>
+            <p>
+              Experience as part of Hungarian television series writers’ rooms, contributing to story development,
+              episode thinking and collaborative narrative work.
+            </p>
+          </article>
         </div>
-        <div class="links-row"><a class="mini-link" href="https://www.imdb.com/title/tt35485979/" target="_blank" rel="noopener">NORTH on IMDb</a></div>
+
+        <div class="links-row">
+          <a class="mini-link" href="https://www.imdb.com/title/tt35485979/" target="_blank" rel="noopener">NORTH on IMDb</a>
+        </div>
       </section>
+
       <section class="section" id="braintrust">
         <div class="kicker">Braintrust Creative</div>
         <h2>A clear, respectful way to make stories stronger.</h2>
-        <p class="body-lg">The Braintrust Method is close to the way I think and work. It is a non-hierarchical creative process built on honest feedback, multiple perspectives and shared responsibility for the work. It does not replace the author’s voice; it helps the author see the project more clearly.</p>
+        <p class="body-lg">
+          The Braintrust Method is close to the way I think and work. It is a non-hierarchical creative process
+          built on honest feedback, multiple perspectives and shared responsibility for the work. It does not replace
+          the author’s voice; it helps the author see the project more clearly.
+        </p>
+
         <div class="method">
-          <div class="method-item"><strong>Core Question</strong><span>What is the human question at the center of the story?</span></div>
-          <div class="method-item"><strong>Clarity</strong><span>What is working, what is confusing, and what feels emotionally untrue?</span></div>
-          <div class="method-item"><strong>Trust</strong><span>Direct feedback without performance, ego or panic.</span></div>
-          <div class="method-item"><strong>Next Steps</strong><span>Concrete priorities for scenes, characters, structure, tone and pitch.</span></div>
+          <div class="method-item">
+            <strong>Core Question</strong>
+            <span>What is the human question at the center of the story?</span>
+          </div>
+          <div class="method-item">
+            <strong>Clarity</strong>
+            <span>What is working, what is confusing, and what feels emotionally untrue?</span>
+          </div>
+          <div class="method-item">
+            <strong>Trust</strong>
+            <span>Direct feedback without performance, ego or panic.</span>
+          </div>
+          <div class="method-item">
+            <strong>Next Steps</strong>
+            <span>Concrete priorities for scenes, characters, structure, tone and pitch.</span>
+          </div>
         </div>
+
         <div class="split">
-          <div class="quote"><p>“For me, a Braintrust creative is someone who helps connect ideas, people, stories, systems and perspectives.”</p></div>
-          <div class="card"><h3>For whom</h3><p>Feature films, animation projects, series concepts, novels, short stories, treatments, pitch decks and early-stage creative material that needs honest but constructive development.</p></div>
+          <div class="quote">
+            <p>
+              “For me, a Braintrust creative is someone who helps connect ideas, people, stories, systems and perspectives.”
+            </p>
+          </div>
+          <div class="card">
+            <h3>For whom</h3>
+            <p>
+              Feature films, animation projects, series concepts, novels, short stories, treatments, pitch decks
+              and early-stage creative material that needs honest but constructive development.
+            </p>
+          </div>
         </div>
       </section>
+
       <section class="section" id="writing">
         <div class="kicker">Writing</div>
         <h2>Literary work behind the screen work.</h2>
         <div class="work-block">
-          <p>My work as a writer remains closely connected to my work as a producer. Literature is where I test voice, memory, character, rhythm and moral ambiguity before they become larger narrative worlds.</p>
-          <p>I was an author at Ulpius-ház, which published <em>A Nemlétező Szavak Enciklopédiája</em>. I also had contracts for two further books written in Indonesia, but those books were ultimately not published there, and I later ended the contract.</p>
-          <p>My prose and short fiction appeared regularly in <em>Liget Műhely</em>, first in print and later online. I also published children’s stories in print for young readers. This literary background informs how I approach films, animation and immersive content: through character, detail, atmosphere and the unsaid.</p>
+          <p>
+            My work as a writer remains closely connected to my work as a producer. Literature is where I test voice,
+            memory, character, rhythm and moral ambiguity before they become larger narrative worlds.
+          </p>
+          <p>
+            I was an author at Ulpius-ház, which published <em>A Nemlétező Szavak Enciklopédiája</em>.
+            I also had contracts for two further books written in Indonesia, but those books were ultimately not
+            published there, and I later ended the contract.
+          </p>
+          <p>
+            My prose and short fiction appeared regularly in <em>Liget Műhely</em>, first in print and later online.
+            I also published children’s stories in print for young readers. This literary background informs how I
+            approach films, animation and immersive content: through character, detail, atmosphere and the unsaid.
+          </p>
         </div>
+
         <div class="links-row">
           <a class="mini-link" href="https://hu.wikipedia.org/wiki/Incz%C3%A9dy_Tam%C3%A1s" target="_blank" rel="noopener">Wikipedia</a>
           <a class="mini-link" href="https://ligetmuhely.com/szerzo/inczedytamas/" target="_blank" rel="noopener">Liget author page</a>
           <a class="mini-link" href="https://szitakoto.com/szerzok/inczedy-tamas/" target="_blank" rel="noopener">Szitakötő author page</a>
         </div>
       </section>
+
       <section class="section">
         <div class="split">
           <div>
             <div class="kicker">Approach</div>
             <h2>The story must remain human.</h2>
-            <p class="body-lg">Every project begins with a person under pressure. What do they want? What are they hiding? What are they afraid to admit? Once that is clear, structure, tone, visuals and production decisions can serve the same purpose.</p>
+            <p class="body-lg">
+              Every project begins with a person under pressure. What do they want? What are they hiding?
+              What are they afraid to admit? Once that is clear, structure, tone, visuals and production decisions
+              can serve the same purpose.
+            </p>
           </div>
-          <div class="quote"><p>“Strategic thinking, literary experience and production reality can work together — if the story has a human center.”</p></div>
+          <div class="quote">
+            <p>
+              “Strategic thinking, literary experience and production reality can work together — if the story has a human center.”
+            </p>
+          </div>
         </div>
       </section>
+
       <section class="section" id="contact">
         <div class="contact-box">
           <div>
             <div class="kicker">Contact</div>
             <h2>Let’s develop the human center of your story.</h2>
-            <p>For producing, Braintrust sessions, story development, writing, animation, AR/XR content or pitch materials, feel free to get in touch.</p>
+            <p>
+              For producing, Braintrust sessions, story development, writing, animation, AR/XR content or pitch materials,
+              feel free to get in touch.
+            </p>
           </div>
           <a class="button primary" href="mailto:tamas.inczedy@pictorytale.com">Email Tamás</a>
         </div>
       </section>
     </main>
+
     <footer>
       <span>© 2026 Tamás Inczédy</span>
       <span>Budapest, Hungary · tamas.inczedy@pictorytale.com</span>
